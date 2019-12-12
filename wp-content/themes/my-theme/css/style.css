@@ -1,0 +1,325 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  font-family: 'Helvetica Neue', sans-serif; }
+
+.wrapper {
+  min-height: 100vh;
+  width: 100vw;
+  position: relative; }
+  .wrapper header {
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 99%; }
+    .wrapper header .menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center; }
+      .wrapper header .menu .logo {
+        flex: 0 0 auto;
+        padding: 2.5em 2em 2em 2em; }
+        .wrapper header .menu .logo a {
+          font-size: 1em;
+          color: black;
+          font-weight: bold;
+          text-decoration: none; }
+        .wrapper header .menu .logo span {
+          font-size: .8em;
+          color: black;
+          text-decoration: none; }
+      .wrapper header .menu .bars {
+        flex: 0 0 auto;
+        margin-right: 2em;
+        color: black; }
+        .wrapper header .menu .bars .fa-bars {
+          font-size: 1.2em; }
+      .wrapper header .menu .nav {
+        flex: 1 0 95%;
+        text-align: center; }
+        .wrapper header .menu .nav li {
+          display: block;
+          line-height: 2em;
+          padding: .8em; }
+          .wrapper header .menu .nav li a {
+            text-decoration: none;
+            color: black;
+            font-size: .8em;
+            text-transform: uppercase;
+            font-weight: bolder;
+            letter-spacing: .1em; }
+            .wrapper header .menu .nav li a:hover {
+              color: #ccc; }
+  .wrapper .main {
+    min-height: auto;
+    padding: 10em 3em 3em 3em; }
+  .wrapper .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1em 2em;
+    background-color: rgba(255, 255, 255, 0.8); }
+    .wrapper .footer ul {
+      display: flex; }
+      .wrapper .footer ul a {
+        color: black;
+        font-size: 1.2em;
+        flex: 0 0 10%;
+        margin-right: .6em; }
+        .wrapper .footer ul a:hover {
+          color: #ccc; }
+
+@media only screen and (min-width: 60em) {
+  .wrapper header {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em 2em;
+    background-color: rgba(255, 255, 255, 0.8); }
+    .wrapper header .menu {
+      width: 100%; }
+      .wrapper header .menu .logo {
+        position: fixed;
+        top: 0;
+        left: 0; }
+      .wrapper header .menu .bars {
+        display: none; }
+      .wrapper header .menu .nav {
+        display: flex !important;
+        justify-content: flex-end; }
+        .wrapper header .menu .nav .back-up {
+          display: none; } }
+.main .container-about .img-box {
+  height: 8em;
+  margin-bottom: 2em; }
+  .main .container-about .img-box div {
+    height: 8em;
+    width: 30%;
+    margin: auto; }
+    .main .container-about .img-box div .img {
+      width: 100%;
+      border-radius: 50%;
+      background-image: url(img/test.jpg);
+      background-size: cover;
+      background-repeat: no-repeat; }
+.main .container-about .about-me {
+  font-family: 'Palanquin', sans-serif;
+  text-align: center; }
+  .main .container-about .about-me h2 {
+    margin-bottom: 1em; }
+  .main .container-about .about-me p {
+    line-height: 1.5em; }
+
+.main .container-contact .form-box {
+  font-family: 'Palanquin', sans-serif;
+  text-align: center; }
+  .main .container-contact .form-box .form {
+    margin-top: 2em;
+    display: flex;
+    flex-wrap: wrap; }
+    .main .container-contact .form-box .form .form-items {
+      flex: 1 0 90%;
+      display: flex;
+      margin-bottom: 1.5em; }
+      .main .container-contact .form-box .form .form-items input, .main .container-contact .form-box .form .form-items textarea {
+        flex: 1 0 90%;
+        border: transparent;
+        border-style: none;
+        padding: .5em;
+        border-bottom: 1px dotted black; }
+        .main .container-contact .form-box .form .form-items input::placeholder, .main .container-contact .form-box .form .form-items textarea::placeholder {
+          font-family: 'Palanquin', sans-serif; }
+        .main .container-contact .form-box .form .form-items input:focus-within, .main .container-contact .form-box .form .form-items textarea:focus-within {
+          outline: none;
+          background-color: none; }
+      .main .container-contact .form-box .form .form-items .button {
+        flex: 0 0 40%;
+        margin: auto;
+        background-color: black;
+        color: white;
+        padding: .2em; }
+
+.main .work {
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 10; }
+  .main .work .work-item {
+    height: 23em;
+    flex: 1 0 90%;
+    margin-bottom: 1em;
+    border-radius: 100%;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+    .main .work .work-item .title {
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      font-size: 1.5em;
+      font-family: 'Helvetica Neue', sans-serif;
+      transform: translateY(50%);
+      text-align: center;
+      margin-top: 30%; }
+    .main .work .work-item .text-work {
+      position: absolute;
+      height: 25em;
+      width: 100%;
+      border-radius: 20%;
+      box-sizing: border-box;
+      padding: 1em;
+      opacity: 0;
+      background-color: rgba(255, 255, 255, 0.8); }
+      .main .work .work-item .text-work:hover {
+        opacity: 1;
+        transition: all 0.5s ease; }
+      .main .work .work-item .text-work .title {
+        text-transform: uppercase;
+        letter-spacing: .05em;
+        font-size: 1.2em;
+        font-family: 'Helvetica Neue', sans-serif;
+        transform: translateY(50%);
+        text-align: center;
+        margin-top: 40%;
+        font-weight: bolder;
+        margin-bottom: .5em; }
+      .main .work .work-item .text-work .view {
+        border: none;
+        color: black;
+        font-family: 'Helvetica Neue', sans-serif;
+        font-size: 1em;
+        border-radius: .2em;
+        text-align: center;
+        margin-top: 1em;
+        background-color: transparent; }
+        .main .work .work-item .text-work .view:focus-within {
+          outline: none; }
+        .main .work .work-item .text-work .view .fa-chevron-right {
+          margin-left: .5em;
+          font-size: .8em; }
+    .main .work .work-item:hover > .text-work {
+      transform: translateY(0); }
+
+@media only screen and (min-width: 60em) {
+  .main {
+    margin-right: 4em;
+    margin-left: 4em; }
+    .main .work .work-item {
+      height: 23em;
+      flex: 1 0 40%;
+      margin-left: 1em;
+      margin-right: 1em;
+      margin-bottom: 2em;
+      border-radius: 100%;
+      position: relative;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center; }
+      .main .work .work-item .title {
+        text-transform: uppercase;
+        letter-spacing: .05em;
+        font-size: 1.5em;
+        font-family: 'Helvetica Neue', sans-serif;
+        transform: translateY(50%);
+        text-align: center;
+        margin-top: 30%; }
+      .main .work .work-item .text-work {
+        position: absolute;
+        height: 25em;
+        width: 100%;
+        border-radius: 20%;
+        box-sizing: border-box;
+        padding: 1em;
+        opacity: 0;
+        background-color: rgba(255, 255, 255, 0.8); }
+        .main .work .work-item .text-work:hover {
+          opacity: 1;
+          transition: all 0.5s ease; }
+        .main .work .work-item .text-work .title {
+          text-transform: uppercase;
+          letter-spacing: .05em;
+          font-size: 1.2em;
+          font-family: 'Helvetica Neue', sans-serif;
+          transform: translateY(50%);
+          text-align: center;
+          margin-top: 40%;
+          font-weight: bolder;
+          margin-bottom: .5em; }
+        .main .work .work-item .text-work .view {
+          border: none;
+          color: black;
+          font-family: 'Helvetica Neue', sans-serif;
+          font-size: 1em;
+          border-radius: .2em;
+          text-align: center;
+          margin-top: 1em;
+          background-color: transparent; }
+          .main .work .work-item .text-work .view:focus-within {
+            outline: none; }
+          .main .work .work-item .text-work .view .fa-chevron-right {
+            margin-left: .5em;
+            font-size: .8em; }
+      .main .work .work-item:hover > .text-work {
+        transform: translateY(0); } }
+@media only screen and (min-width: 80em) {
+  .main {
+    margin-right: 7em;
+    margin-left: 7em; }
+    .main .work {
+      display: flex;
+      flex-wrap: wrap;
+      z-index: 10;
+      height: 100vh; }
+      .main .work .work-item {
+        height: 25em;
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+        border-radius: 50%;
+        flex: 1 0 25%;
+        margin-bottom: 2em;
+        overflow: hidden;
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; }
+        .main .work .work-item .title {
+          margin-bottom: 1em;
+          letter-spacing: .05em; }
+        .main .work .work-item .text-work {
+          position: absolute;
+          height: 25em;
+          border-radius: 50%;
+          box-sizing: border-box;
+          padding: 1em;
+          opacity: 0;
+          background-color: rgba(255, 255, 255, 0.8); }
+          .main .work .work-item .text-work:hover {
+            opacity: 1;
+            transition: all 0.5s ease; }
+          .main .work .work-item .text-work .title {
+            text-transform: uppercase;
+            letter-spacing: .05em;
+            font-size: 1.5em;
+            font-family: 'Helvetica Neue', sans-serif;
+            transform: translateY(50%);
+            text-align: center;
+            margin-top: 35%; }
+          .main .work .work-item .text-work .view {
+            border: none;
+            color: black;
+            font-family: 'Helvetica Neue', sans-serif;
+            font-size: .8em;
+            border-radius: .2em;
+            text-align: center;
+            margin-top: 1.5em;
+            background-color: transparent; }
+            .main .work .work-item .text-work .view:focus-within {
+              outline: none; }
+            .main .work .work-item .text-work .view .fa-chevron-right {
+              margin-left: .5em;
+              font-size: .8em; } }
+
+/*# sourceMappingURL=style.css.map */

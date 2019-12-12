@@ -1,0 +1,1 @@
+<h3>Hello this is the default page</h3>

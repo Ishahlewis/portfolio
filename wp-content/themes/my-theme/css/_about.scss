@@ -1,0 +1,38 @@
+.main{
+
+    .container-about{
+        
+        .img-box{
+            height: 8em;
+            margin-bottom: 2em;
+    
+            div{
+                height: 8em;
+                width: 30%;
+                margin:auto;
+    
+                .img{
+                    width: 100%;
+                    border-radius: 50%;
+                    background-image: url(img/test.jpg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+    
+        .about-me{
+            font-family: 'Palanquin', sans-serif;
+            text-align: center;
+    
+            h2{
+                margin-bottom: 1em;
+            }
+    
+            p{
+                line-height: 1.5em;
+            }
+        }
+    }
+}
+

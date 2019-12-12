@@ -1,0 +1,48 @@
+.main{
+
+    .container-contact{
+        
+        .form-box{
+            font-family: 'Palanquin', sans-serif;
+            text-align: center;
+    
+            .form{
+                margin-top: 2em;
+                display: flex;
+                flex-wrap: wrap;
+    
+                .form-items{
+                    flex: 1 0 90%;
+                    display: flex;
+                    margin-bottom: 1.5em;
+    
+                    input, textarea{
+                        flex: 1 0 90%;
+                        border: transparent;
+                        border-style: none;
+                        padding: .5em;
+                        border-bottom: 1px dotted black;
+    
+                        &::placeholder{
+                            font-family: 'Palanquin', sans-serif;
+                        }
+    
+                        &:focus-within{
+                            outline: none;
+                            background-color: none;
+                        }
+                    }
+    
+                    .button{
+                        flex: 0 0 40%;
+                        margin: auto;
+                        background-color: black;
+                        color: white;
+                        padding:.2em;
+                    }
+                }
+            }
+        }
+    }
+    
+}
